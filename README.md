@@ -1,10 +1,10 @@
 # SoftModalMessageBox - Change text on Messagebox buttons
-When developing ImgDrive, we need to change text on MessageBox buttons, but MessageBox doesn't export the related interface to the outside world. We spent some time to reverse analyze user32.dll and successfully achieved our goal.
+When developing ImgDrive, we need to change text on MessageBox buttons, but MessageBox doesn't export related interface. We spent some time to reverse analyze user32.dll and successfully achieved our goal.
 
 ![image](https://github.com/dvdforge/SoftModalMessageBox/assets/19568093/8eee67ba-210f-4550-8884-fcfb079ee570)
 
 ## Usage
-To customize the button text, you need to call the undocumented SoftModalMessageBox interface in user32.dll.
+To customize the button text, need to call the undocumented SoftModalMessageBox function in user32.dll.
 ``` c++
 #include "SoftModalMessageBox.h"
 
