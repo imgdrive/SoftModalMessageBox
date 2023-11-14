@@ -1,4 +1,4 @@
-# SoftModalMessageBox
+# SoftModalMessageBox - Change text on Messagebox buttons
 When developing ImgDrive, we need to change text on MessageBox buttons, but MessageBox doesn't export the related interface to the outside world. We spent some time to reverse analyze user32.dll and successfully achieved our goal.
 
 ![image](https://github.com/dvdforge/SoftModalMessageBox/assets/19568093/8eee67ba-210f-4550-8884-fcfb079ee570)
