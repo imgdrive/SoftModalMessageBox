@@ -126,12 +126,12 @@ int SoftModalMessageBox(PMSGBOXDATA lpmb);
 			<td>Load button text in the specified language</td>
 			<td>MessageBoxEx</td>
 			<td>wLanguageId is used to specify the language of the button text. For example:<br>
-			MAKELANGID(LANG_JAPANESE, SUBLANG_DEFAULT)</td>
+			MAKELANGID(LANG_JAPANESE, SUBLANG_DEFAULT).<br>Windows will load the button text from user32.dll in the corresponding language, if it fails, it will load it again in the current system language.</td>
 		</tr>
 		<tr>
 			<td>Dialogs disappear automatically after a few seconds</td>
 			<td>MessageBoxTimeout</td>
-			<td>Windows will load the button text from user32.dll in the corresponding language, if it fails, it will load it again in the current system language.</td>
+			<td>This function is undocumented.</td>
 		</tr>
 		<tr>
 			<td>Supports up to 11 buttons</td>
