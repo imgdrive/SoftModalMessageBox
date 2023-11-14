@@ -12,13 +12,13 @@ int foo() {
     MSGBOXBUTTONW Buttons[] = {
         {IDOK}, 
         {IDCANCEL, L"Annuler"}, 
-        {IDABORT, L"÷–÷π"}, 
-        {IDRETRY, L"÷ÿ‘á"}, 
+        {IDABORT, L"‰∏≠Ê≠¢"}, 
+        {IDRETRY, L"ÈáçË©¶"}, 
         {IDIGNORE, L"Ignorieren"}, 
-        {IDYES, L"S®¨"}, 
+        {IDYES, L"S√¨"}, 
         {IDNO, L"N?o"}, 
         {IDCLOSE, L"Cerrar"}, 
-        {IDHELP, L"ß≥ß·ß‚ß—ß”ß‹ß—"}, 
+        {IDHELP, L"–°–ø—Ä–∞–≤–∫–∞"}, 
         {IDTRYAGAIN, L"Pr?v igjen"}, 
         {IDCONTINUE, L"Voortzetten"}};
 
@@ -141,3 +141,8 @@ int SoftModalMessageBox(PMSGBOXDATA lpmb);
 		</tr>
 	</tbody>
 </table>
+
+## Notes
+- SoftModalMessageBox internally constructs a DLGTEMPLATE structure, and then calls InternalDialogBox to create a dialog box. The FontHeight of DLTEMPLATE is assigned to 0x7FFF, which indicates that this dialog box uses MessageBox special font. Call SystemParametersInfo(SPI_GETNONCLIENTMETRICS, 0, &ncm, 0) ncm.lfMessageFont return the LOGFONT.
+
+- Dialog size: https://devblogs.microsoft.com/oldnewthing/20110624-00/?p=10343
