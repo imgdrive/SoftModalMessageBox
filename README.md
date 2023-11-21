@@ -145,4 +145,6 @@ int SoftModalMessageBox(PMSGBOXDATA lpmb);
 ## Notes
 - SoftModalMessageBox internally constructs a DLGTEMPLATE structure, and then calls InternalDialogBox to create a dialog box. The FontHeight of DLGTEMPLATE is assigned to 0x7FFF, which indicates that this dialog box uses MessageBox special font. Call SystemParametersInfo(SPI_GETNONCLIENTMETRICS, 0, &ncm, 0) ncm.lfMessageFont return the LOGFONT.
 
+- Ctrl+C can be used to copy all the text on the MessageBox interface: title, message, button text.
+
 - Dialog size: https://devblogs.microsoft.com/oldnewthing/20110624-00/?p=10343
